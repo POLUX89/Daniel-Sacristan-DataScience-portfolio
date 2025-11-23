@@ -8,7 +8,7 @@ I combine **Flight Ops discipline** with **Data Analytics** using Excel, Power B
 
 ## 👨‍✈️ About Me
 
-I’m a Colombian Air Force Captain and UH-60 / UH-1 pilot transitioning into **Data & Business Intelligence**.  
+I’m a Colombian Air Force Captain and UH-60 copilot/ UH-1 pilot transitioning into **Data & Business Intelligence**.  
 During my CVA rehabilitation, I started building dashboards to track flight hours, therapy, transportation costs, and later operational metrics.
 
 Now I design analytical systems that are:
