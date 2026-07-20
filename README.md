@@ -1,14 +1,14 @@
-# Daniel Felipe Sacristán Ávila – Analytics Portfolio
+# Daniel Felipe Sacristán Ávila – Data Science Portfolio
 
-This repository contains a collection of real-world analytics projects built from my experience in **military aviation operations, rehabilitation, and daily life optimization**.
+This repository is the index of my data science projects, built from my experience in **military aviation operations, rehabilitation, and daily life optimization**.
 
-I combine **Flight Ops discipline** with **Data Analytics** using Excel, Power BI, Python and SQL to create dashboards and models that support decision-making.
+I combine **Flight Ops discipline** with **Data Science** using Python, SQL, Excel and Power BI to create dashboards and models that support decision-making.
 
 ---
 
 ## 👨‍✈️ About Me
 
-I’m a Colombian Air Force Captain and UH-60 copilot/ UH-1 pilot transitioning into **Data & Business Intelligence**.  
+I’m a Colombian Air Force Captain and UH-60 copilot/ UH-1 pilot transitioning into **Data Science**.  
 During my CVA rehabilitation, I started building dashboards to track flight hours, therapy, transportation costs, and later operational metrics.
 
 Now I design analytical systems that are:
@@ -22,41 +22,31 @@ You can see the projects below.
 
 ## 📂 Projects
 
-### 1️⃣ Flight Hours Forecasting & Readiness System (Excel)
-**Folder:** `projects/01-flight-hours-forecasting-excel/`  
-Forecasting engine for multi-aircraft quotas using **Coefficient of Variation**, adaptive lookback windows, and visual readiness indicators.
+### 1️⃣ Rehab Strength Dashboard (Streamlit) ✅
+**Repo:** [POLUX89/rehab-strength](https://github.com/POLUX89/rehab-strength)  
+**Live app:** [rehab-strength.streamlit.app](https://rehab-strength.streamlit.app)  
+Streamlit analytics dashboard to track **workouts, sleep and recovery** during my CVA rehabilitation. Integrates three independent data sources, estimates 1RM (Epley), compares pre vs post CVA performance, and applies statistical tests with a strong focus on **data integrity and freshness**. Includes CI, tests and a live deployment.
 
 ---
 
-### 2️⃣ Operational Intelligence Dashboard (Power BI)
-**Folder:** `projects/02-operational-intel-dashboard-powerbi/`  
-Power BI dashboard for **operational results**, geospatial mission mapping, KPI tracking and functional breakdown of missions.
+### 2️⃣ Mortgage Credit Risk – LQN with Synthetic Data 🚧
+**Status:** in progress  
+Credit risk modeling project on **synthetic mortgage lending data** using **LQN**, covering data generation, model training and evaluation of default risk.
 
 ---
 
-### 3️⃣ Transportation Cost Optimization
-**Folder:** `projects/03-transportation-cost-optimization/`  
-Analyzes ride cost vs time of day, distance, duration and virtual vs real price, including **IQR outliers and hypothesis testing**.
+### 🔭 Roadmap
 
----
-
-### 4️⃣ Medical Appointments & Therapy Tracker
-**Folder:** `projects/04-medical-therapy-tracker/`  
-Excel system to monitor therapy sessions, appointments, cancellations, facility load and progress during rehabilitation.
-
----
-
-### 5️⃣ Gym & Sleep Analytics
-**Folder:** `projects/05-gym-sleep-analytics/`  
-Python + Excel pipeline to analyze the relationship between **training, sleep and recovery**, with automated ETL.
+- **GNSS forecaster** – time-series forecasting of GNSS signals (thesis project).
 
 ---
 
 ## 🛠 Tech & Tools
 
+- Python (pandas, ETL, statistical testing, machine learning)
+- Streamlit (interactive dashboards, deployed apps)
 - Excel (advanced dashboards, forecasting, modeling)
 - Power BI (DAX, data modeling, KPIs, maps)
-- Python (pandas, ETL)
 - SQL (basics)
 - Notion (knowledge and portfolio)
 - Power Apps (low-code operational tools)
@@ -66,5 +56,5 @@ Python + Excel pipeline to analyze the relationship between **training, sleep an
 ## 🔗 Links
 
 - LinkedIn: [daniel-felipe-sacristán-ávila](https://www.linkedin.com/in/daniel-felipe-sacristán-ávila-b82aa61ab)
-- Portfolio (Notion): *(add your portfolio URL here)*
+- Portfolio (Notion): *(SOON)*
 - Email: [sacristandanielfelipe@gmail.com](mailto:sacristandanielfelipe@gmail.com)
