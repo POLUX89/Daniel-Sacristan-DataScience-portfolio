@@ -29,7 +29,14 @@ Streamlit analytics dashboard to track **workouts, sleep and recovery** during m
 
 ---
 
-### 2️⃣ Mortgage Credit Risk – LQN with Synthetic Data 🚧
+### 2️⃣ NLP – Fake News Colombia 🚧
+**Repo:** [POLUX89/NLP-Fake-News-Colombia](https://github.com/POLUX89/NLP-Fake-News-Colombia)  
+**Status:** in progress  
+Spanish **NLP** project that classifies news verdicts (true / false / uncertain) from Colombian fact-checks (ColombiaCheck). Includes a **web-scraped dataset**, **BETO** fine-tuning, and responsible-ML documentation — **model card, datasheet and data statement**.
+
+---
+
+### 3️⃣ Mortgage Credit Risk – LQN with Synthetic Data 🚧
 **Status:** in progress  
 Credit risk modeling project on **synthetic mortgage lending data** using **LQN**, covering data generation, model training and evaluation of default risk.
 
@@ -44,6 +51,7 @@ Credit risk modeling project on **synthetic mortgage lending data** using **LQN*
 ## 🛠 Tech & Tools
 
 - Python (pandas, ETL, statistical testing, machine learning)
+- NLP (Hugging Face Transformers, BETO, web scraping)
 - Streamlit (interactive dashboards, deployed apps)
 - Excel (advanced dashboards, forecasting, modeling)
 - Power BI (DAX, data modeling, KPIs, maps)
