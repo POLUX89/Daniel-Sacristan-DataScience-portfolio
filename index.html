@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daniel Sacristán — Data Science Portfolio</title>
+<meta name="description" content="Data science portfolio blending military aviation discipline with Python, statistics and machine learning.">
+<meta property="og:title" content="Daniel Sacristán — Data Science Portfolio">
+<meta property="og:description" content="Helicopter pilot → Data Scientist. Python, statistics and machine learning projects.">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/183035631?v=4">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚁</text></svg>">
+<style>
+  :root {
+    --bg: #f6f8fb;
+    --surface: #ffffff;
+    --text: #1c2733;
+    --muted: #5b6b7c;
+    --accent: #0b66c3;
+    --accent-soft: #e3effb;
+    --border: #e3e9f0;
+    --shadow: 0 1px 2px rgba(16, 42, 67, .06), 0 8px 24px rgba(16, 42, 67, .07);
+    --pill-live-bg: #e2f6e9;   --pill-live-fg: #177a3d;
+    --pill-wip-bg:  #fff3d6;   --pill-wip-fg:  #8a6100;
+    --pill-next-bg: #eceff3;   --pill-next-fg: #55636f;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e141b;
+      --surface: #161e27;
+      --text: #e8eef4;
+      --muted: #9fb0c0;
+      --accent: #58a6ff;
+      --accent-soft: #12283f;
+      --border: #26313d;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+      --pill-live-bg: #12301d;  --pill-live-fg: #4ecb79;
+      --pill-wip-bg:  #33290e;  --pill-wip-fg:  #e3b341;
+      --pill-next-bg: #212a33;  --pill-next-fg: #9fb0c0;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 64px 0 48px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--accent-soft) 0%, var(--bg) 100%);
+  }
+  .avatar {
+    width: 148px; height: 148px;
+    border-radius: 50%;
+    border: 4px solid var(--surface);
+    box-shadow: var(--shadow);
+    object-fit: cover;
+  }
+  .hero h1 { font-size: clamp(1.7rem, 4.5vw, 2.4rem); margin-top: 18px; letter-spacing: -.02em; }
+  .tagline { font-size: clamp(1.02rem, 2.6vw, 1.2rem); color: var(--accent); font-weight: 600; margin-top: 6px; }
+  .meta { color: var(--muted); margin-top: 10px; font-size: .95rem; }
+  .meta span { white-space: nowrap; }
+  .cta { margin-top: 26px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 18px; border-radius: 999px;
+    text-decoration: none; font-weight: 600; font-size: .95rem;
+    border: 1px solid var(--border);
+    background: var(--surface); color: var(--text);
+    box-shadow: var(--shadow);
+    transition: transform .12s ease;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+  /* ---------- Sections ---------- */
+  section { padding: 44px 0 8px; }
+  h2 { font-size: 1.35rem; margin-bottom: 18px; letter-spacing: -.01em; }
+  .about {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 26px 28px;
+    color: var(--text);
+  }
+  .about p + p { margin-top: 12px; }
+  .about .quote { color: var(--muted); font-style: italic; }
+
+  /* ---------- Project cards ---------- */
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 18px; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 22px;
+    display: flex; flex-direction: column; gap: 10px;
+    transition: transform .12s ease;
+  }
+  .card:hover { transform: translateY(-3px); }
+  .card .top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+  .card h3 { font-size: 1.05rem; }
+  .card p { color: var(--muted); font-size: .93rem; flex-grow: 1; }
+  .pill {
+    font-size: .72rem; font-weight: 700; letter-spacing: .03em;
+    padding: 4px 10px; border-radius: 999px; white-space: nowrap;
+  }
+  .pill.live { background: var(--pill-live-bg); color: var(--pill-live-fg); }
+  .pill.wip  { background: var(--pill-wip-bg);  color: var(--pill-wip-fg); }
+  .pill.next { background: var(--pill-next-bg); color: var(--pill-next-fg); }
+  .card .links { display: flex; gap: 14px; flex-wrap: wrap; }
+  .card .links a { color: var(--accent); text-decoration: none; font-weight: 600; font-size: .9rem; }
+  .card .links a:hover { text-decoration: underline; }
+
+  /* ---------- Tech chips ---------- */
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+  .chip {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 7px 14px;
+    font-size: .88rem; font-weight: 600;
+    color: var(--text);
+    box-shadow: var(--shadow);
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    margin-top: 56px;
+    padding: 28px 0 40px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--muted);
+    font-size: .9rem;
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="avatar" src="https://avatars.githubusercontent.com/u/183035631?v=4" alt="Photo of Daniel Sacristán">
+    <h1>Daniel Felipe Sacristán Ávila</h1>
+    <p class="tagline">Helicopter Pilot → Data Scientist 🚁📊</p>
+    <p class="meta">
+      <span>MSc Data Science candidate</span> ·
+      <span>🇨🇴 Colombia</span> ·
+      <span>🌎 Spanish (native) · English (B2)</span>
+    </p>
+    <div class="cta">
+      <a class="btn primary" href="https://github.com/POLUX89" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/daniel-felipe-sacristán-ávila-b82aa61ab" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://rehab-strength.streamlit.app" target="_blank" rel="noopener">▶ Live App</a>
+      <a class="btn" href="mailto:sacristandanielfelipe@gmail.com">✉ Email</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="about">
+    <h2>👨‍✈️ About me</h2>
+    <div class="about">
+      <p>I'm a <strong>Captain in the Colombian Air Force</strong> — UH-60 Black Hawk copilot and UH-1 pilot — transitioning into <strong>data science</strong>.</p>
+      <p>My path into data began while recovering from a stroke: I started building dashboards to track my own rehabilitation — therapy, training load, sleep and recovery — and what began as personal tracking grew into deployed, tested analytics applications and a new career direction.</p>
+      <p class="quote">I bring cockpit discipline to data work: reproducible pipelines, statistical rigor, and clear communication.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>📂 Projects</h2>
+    <div class="grid">
+
+      <article class="card">
+        <div class="top">
+          <h3>🏋️ Rehab Strength Dashboard</h3>
+          <span class="pill live">LIVE</span>
+        </div>
+        <p>Streamlit health-analytics app tracking workouts, sleep and recovery after a stroke. Full data pipeline, statistical testing, CI and a live deployment.</p>
+        <div class="links">
+          <a href="https://rehab-strength.streamlit.app" target="_blank" rel="noopener">Live app »</a>
+          <a href="https://github.com/POLUX89/rehab-strength" target="_blank" rel="noopener">Repository</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="top">
+          <h3>📰 NLP — Fake News Colombia</h3>
+          <span class="pill wip">IN PROGRESS</span>
+        </div>
+        <p>Spanish NLP classifying news verdicts (true / false / uncertain) from Colombian fact-checks. Web-scraped dataset, BETO fine-tuning, and responsible-ML docs: model card, datasheet &amp; data statement.</p>
+        <div class="links">
+          <a href="https://github.com/POLUX89/NLP-Fake-News-Colombia" target="_blank" rel="noopener">Repository</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="top">
+          <h3>🏦 Mortgage Credit Risk</h3>
+          <span class="pill next">UPCOMING</span>
+        </div>
+        <p>Default-risk modeling on synthetic mortgage lending data — data generation, model training and evaluation.</p>
+        <div class="links"></div>
+      </article>
+
+      <article class="card">
+        <div class="top">
+          <h3>🛰️ GNSS Forecasting</h3>
+          <span class="pill next">THESIS</span>
+        </div>
+        <p>Time-series forecasting of GNSS signals — MSc thesis project.</p>
+        <div class="links"></div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="tech">
+    <h2>🛠️ Tech &amp; Tools</h2>
+    <div class="chips">
+      <span class="chip">🐍 Python</span>
+      <span class="chip">🐼 Pandas</span>
+      <span class="chip">🤖 scikit-learn</span>
+      <span class="chip">🤗 Transformers</span>
+      <span class="chip">⚡ Streamlit</span>
+      <span class="chip">📓 Jupyter</span>
+      <span class="chip">🗄️ SQL</span>
+      <span class="chip">📊 Power BI</span>
+      <span class="chip">📈 Excel</span>
+      <span class="chip">🔧 Git &amp; GitHub Actions</span>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>From flight plans to data pipelines — precision, discipline and clear communication.</p>
+    <p style="margin-top:6px">© 2026 Daniel Sacristán · <a href="https://github.com/POLUX89/Daniel-Sacristan-DataScience-portfolio" style="color:var(--accent);text-decoration:none">Source on GitHub</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
