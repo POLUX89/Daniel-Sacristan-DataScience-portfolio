@@ -8,23 +8,9 @@
 
 ---
 
-This repository is the index of my data science projects, built from my experience in **military aviation operations, rehabilitation, and daily life optimization**.
-
-I combine **Flight Ops discipline** with **Data Science** using Python, SQL, Excel and Power BI to create dashboards and models that support decision-making.
-
----
-
 ## 👨‍✈️ About Me
 
-I’m a Colombian Air Force Captain and UH-60 copilot/ UH-1 pilot transitioning into **Data Science**.  
-During my CVA rehabilitation, I started building dashboards to track flight hours, therapy, transportation costs, and later operational metrics.
-
-Now I design analytical systems that are:
-- operationally realistic
-- statistically grounded
-- visually clear
-
-You can see the projects below.
+Colombian Air Force captain (UH-60 Black Hawk copilot / UH-1 pilot) transitioning into **data science**. I discovered data while recovering from a stroke — building dashboards to track my own rehabilitation — and turned it into a career path. I bring cockpit discipline to data work: reproducible pipelines, statistical rigor, and clear communication.
 
 ---
 
@@ -51,27 +37,26 @@ Forecasting Colombia's **hourly wholesale electricity spot price** (*precio de b
 
 ---
 
-### 4️⃣ Mortgage Credit Risk – LQN with Synthetic Data 🚧
-**Status:** in progress  
+### 4️⃣ Mortgage Credit Risk – LQN with Synthetic Data 🔭
+**Status:** upcoming  
 Credit risk modeling project on **synthetic mortgage lending data** using **LQN**, covering data generation, model training and evaluation of default risk.
 
 ---
 
 ## 🛠 Tech & Tools
 
-- Python (pandas, ETL, statistical testing, machine learning)
-- NLP (Hugging Face Transformers, BETO, web scraping)
-- Streamlit (interactive dashboards, deployed apps)
-- Excel (advanced dashboards, forecasting, modeling)
-- Power BI (DAX, data modeling, KPIs, maps)
-- SQL (basics)
-- Notion (knowledge and portfolio)
-- Power Apps (low-code operational tools)
+- **Python** — pandas, scikit-learn, ETL, statistical testing
+- **NLP** — Hugging Face Transformers, BETO, spaCy, web scraping
+- **Time series** — forecasting, self-updating ingestion pipelines
+- **Streamlit** — interactive dashboards, deployed apps
+- **Git & GitHub Actions** — version control, CI, automated pipelines
+- **SQL** — querying and data extraction
+- **Power BI / Excel** — dashboards, KPIs, modeling
 
 ---
 
 ## 🔗 Links
 
-- LinkedIn: [daniel-felipe-sacristán-ávila](https://www.linkedin.com/in/daniel-felipe-sacristán-ávila-b82aa61ab)
-- Portfolio (Notion): *(SOON)*
-- Email: [sacristandanielfelipe@gmail.com](mailto:sacristandanielfelipe@gmail.com)
+- 🌐 Portfolio: [polux89.github.io/Daniel-Sacristan-DataScience-portfolio](https://polux89.github.io/Daniel-Sacristan-DataScience-portfolio/)
+- 💼 LinkedIn: [daniel-felipe-sacristán-ávila](https://www.linkedin.com/in/daniel-felipe-sacristán-ávila-b82aa61ab)
+- 📧 Email: [sacristandanielfelipe@gmail.com](mailto:sacristandanielfelipe@gmail.com)
