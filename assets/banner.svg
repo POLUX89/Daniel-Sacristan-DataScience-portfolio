@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" width="1280" height="320" role="img" aria-label="Daniel Felipe Sacristán Ávila — Helicopter Pilot to Data Scientist">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#02040a"/>
+      <stop offset="50%" stop-color="#070d1a"/>
+      <stop offset="100%" stop-color="#03060e"/>
+    </linearGradient>
+    <linearGradient id="trend" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4dabff"/>
+      <stop offset="100%" stop-color="#3ddc84"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#4dabff" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#4dabff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4dabff" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#4dabff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#3ddc84" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="320" fill="url(#bg)"/>
+
+  <!-- faint instrument grid -->
+  <g stroke="#8fb6dd" stroke-opacity="0.05" stroke-width="1">
+    <path d="M0 80h1280M0 160h1280M0 240h1280"/>
+    <path d="M80 0v320M240 0v320M400 0v320M560 0v320M720 0v320M880 0v320M1040 0v320M1200 0v320"/>
+  </g>
+
+  <ellipse cx="280" cy="168" rx="285" ry="126" fill="url(#glow)"/>
+
+  <!-- ===================== UH-60 BLACK HAWK (nose right) ===================== -->
+  <g fill="#f2f7fc">
+    <!-- fuselage + tail boom: long low body, sloped windshield, short drooped nose -->
+    <path d="M392 182
+             L374 166
+             L346 150
+             L250 147
+             L216 152
+             L104 164
+             L104 172
+             L140 176
+             L208 190
+             Q220 197 240 197
+             L352 196
+             Q388 192 392 182 Z"/>
+
+    <!-- swept vertical fin (top leans aft) -->
+    <path d="M152 166 L120 110 L98 113 L106 168 Z"/>
+
+    <!-- stabilator: low horizontal tail surface at fin base -->
+    <path d="M76 162 L154 158 L154 168 L76 172 Z"/>
+
+    <!-- engine + gearbox fairing on the upper deck -->
+    <path d="M338 147 Q338 136 326 134 L254 133 Q244 134 240 140 L236 147 Z"/>
+
+    <!-- rotor mast + head -->
+    <path d="M310 134 L308 123 L326 123 L324 134 Z"/>
+    <circle cx="317" cy="120" r="8"/>
+
+    <!-- main gear (forward, under cockpit) -->
+    <rect x="340" y="195" width="6" height="12"/>
+    <circle cx="343" cy="212" r="9"/>
+    <!-- tail wheel (under aft boom, forward of the fin) -->
+    <rect x="148" y="175" width="5" height="14"/>
+    <circle cx="150" cy="194" r="7"/>
+  </g>
+
+  <!-- main rotor: two drooping blades from the hub -->
+  <path d="M317 115 L468 121 L468 126 L317 121 Z" fill="#f2f7fc"/>
+  <path d="M317 115 L142 121 L142 125 L317 121 Z" fill="#f2f7fc"/>
+
+  <!-- blade dissolving into data points -->
+  <g fill="#4dabff">
+    <circle cx="484" cy="124" r="5.5" opacity="1"/>
+    <circle cx="504" cy="124" r="5" opacity="0.8"/>
+    <circle cx="522" cy="125" r="4.5" opacity="0.6"/>
+    <circle cx="538" cy="125" r="4" opacity="0.4"/>
+    <circle cx="552" cy="126" r="3.5" opacity="0.22"/>
+  </g>
+
+  <!-- tail rotor: 4-blade cross, canted 20° (Black Hawk signature) -->
+  <g transform="rotate(-20 102 126)">
+    <rect x="99" y="98" width="6" height="56" rx="3" fill="#f2f7fc"/>
+    <rect x="74" y="123" width="56" height="6" rx="3" fill="#f2f7fc"/>
+  </g>
+  <circle cx="102" cy="126" r="5" fill="#f2f7fc"/>
+
+  <!-- cockpit glass -->
+  <path d="M350 154 L382 180 L364 186 L342 161 Z" fill="#4dabff" opacity="0.9"/>
+  <!-- cockpit door window -->
+  <rect x="316" y="159" width="22" height="18" rx="4" fill="#4dabff" opacity="0.55"/>
+  <!-- cabin sliding-door window + aft window -->
+  <rect x="258" y="157" width="34" height="21" rx="4" fill="#4dabff" opacity="0.5"/>
+  <rect x="228" y="158" width="20" height="19" rx="4" fill="#4dabff" opacity="0.35"/>
+
+  <!-- ===================== TEXT ===================== -->
+  <text x="576" y="150" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="40" font-weight="700" fill="#ffffff" letter-spacing="-0.3">Daniel Felipe Sacristán Ávila</text>
+  <text x="578" y="194" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28" font-weight="600" fill="#4dabff">Helicopter Pilot → Data Scientist</text>
+
+  <!-- flight hours under the helicopter -->
+  <text x="272" y="256" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#3ddc84" letter-spacing="0.4">1500+ flight hours</text>
+
+  <!-- ===================== RISING TREND (feeds the network) ===================== -->
+  <polyline points="70,300 170,294 270,296 370,286 470,289 570,276 670,279 770,266 870,269 970,258 1078,252"
+            fill="none" stroke="url(#trend)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#3ddc84">
+    <circle cx="370" cy="286" r="4"/>
+    <circle cx="570" cy="276" r="4"/>
+    <circle cx="770" cy="266" r="4"/>
+    <circle cx="970" cy="258" r="4"/>
+  </g>
+
+  <!-- ===================== NEURAL NETWORK (bottom right) ===================== -->
+  <g stroke="#4dabff" stroke-opacity="0.3" stroke-width="1.2">
+    <path d="M1104 222 L1164 216 M1104 222 L1164 240 M1104 222 L1164 264 M1104 222 L1164 288"/>
+    <path d="M1104 252 L1164 216 M1104 252 L1164 240 M1104 252 L1164 264 M1104 252 L1164 288"/>
+    <path d="M1104 282 L1164 216 M1104 282 L1164 240 M1104 282 L1164 264 M1104 282 L1164 288"/>
+    <path d="M1164 216 L1222 232 M1164 240 L1222 232 M1164 264 L1222 232 M1164 288 L1222 232"/>
+    <path d="M1164 216 L1222 270 M1164 240 L1222 270 M1164 264 L1222 270 M1164 288 L1222 270"/>
+  </g>
+  <g fill="#4dabff">
+    <circle cx="1104" cy="222" r="5.5"/>
+    <circle cx="1104" cy="252" r="5.5"/>
+    <circle cx="1104" cy="282" r="5.5"/>
+  </g>
+  <g fill="#8fb6dd">
+    <circle cx="1164" cy="216" r="5.5"/>
+    <circle cx="1164" cy="240" r="5.5"/>
+    <circle cx="1164" cy="264" r="5.5"/>
+    <circle cx="1164" cy="288" r="5.5"/>
+  </g>
+  <g fill="#3ddc84">
+    <circle cx="1222" cy="232" r="6"/>
+    <circle cx="1222" cy="270" r="6"/>
+  </g>
+
+  <!-- bottom accent edge -->
+  <rect x="0" y="317" width="1280" height="3" fill="url(#edge)"/>
+</svg>
