@@ -22,6 +22,7 @@
     --pill-live-bg: #e2f6e9;   --pill-live-fg: #177a3d;
     --pill-wip-bg:  #fff3d6;   --pill-wip-fg:  #8a6100;
     --pill-next-bg: #eceff3;   --pill-next-fg: #55636f;
+    --pill-thesis-bg: #f0e7fd; --pill-thesis-fg: #6b3fc4;
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -36,6 +37,7 @@
       --pill-live-bg: #12301d;  --pill-live-fg: #4ecb79;
       --pill-wip-bg:  #33290e;  --pill-wip-fg:  #e3b341;
       --pill-next-bg: #212a33;  --pill-next-fg: #9fb0c0;
+      --pill-thesis-bg: #251a3d; --pill-thesis-fg: #c4a7f5;
     }
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -125,6 +127,7 @@
   .pill.live { background: var(--pill-live-bg); color: var(--pill-live-fg); }
   .pill.wip  { background: var(--pill-wip-bg);  color: var(--pill-wip-fg); }
   .pill.next { background: var(--pill-next-bg); color: var(--pill-next-fg); }
+  .pill.thesis { background: var(--pill-thesis-bg); color: var(--pill-thesis-fg); }
   .card .links { display: flex; gap: 14px; flex-wrap: wrap; }
   .card .links a { color: var(--accent); text-decoration: none; font-weight: 600; font-size: .9rem; }
   .card .links a:hover { text-decoration: underline; }
@@ -227,11 +230,13 @@
 
       <article class="card">
         <div class="top">
-          <h3>🏦 Mortgage Credit Risk</h3>
-          <span class="pill next">UPCOMING</span>
+          <h3>🚁 ASRS Rotorcraft NLP</h3>
+          <span class="pill thesis">THESIS</span>
         </div>
-        <p>Default-risk modeling on synthetic mortgage lending data — data generation, model training and evaluation.</p>
-        <div class="links"></div>
+        <p>MSc thesis: NLP on NASA ASRS aviation safety reports — taxonomic coverage of incident narratives in rotorcraft operations, with disaggregated evaluation audited against 1500+ flight hours of domain expertise.</p>
+        <div class="links">
+          <a href="https://github.com/POLUX89/asrs-rotorcraft-nlp" target="_blank" rel="noopener">Repository</a>
+        </div>
       </article>
 
     </div>
