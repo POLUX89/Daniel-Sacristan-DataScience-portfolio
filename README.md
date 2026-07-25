@@ -29,22 +29,23 @@ Streamlit analytics dashboard to track **workouts, sleep and recovery** during m
 
 ---
 
-### 2️⃣ NLP – Fake News Colombia 🚧
+### 2️⃣ NLP – Fake News Colombia ✅
 **Repo:** [POLUX89/NLP-Fake-News-Colombia](https://github.com/POLUX89/NLP-Fake-News-Colombia)  
-**Status:** in progress  
+**Live demo:** [beto-colombiacheck.streamlit.app](https://beto-colombiacheck.streamlit.app/)  
 Spanish **NLP** project that classifies news verdicts (true / false / uncertain) from Colombian fact-checks (ColombiaCheck). Includes a **web-scraped dataset**, **BETO** fine-tuning, and responsible-ML documentation — **model card, datasheet and data statement**.
 
 ---
 
-### 3️⃣ Mortgage Credit Risk – LQN with Synthetic Data 🚧
+### 3️⃣ Energy Price Forecasting – Colombia 🚧
+**Repo:** [POLUX89/Forecast-Energy-StockChange-Colombia](https://github.com/POLUX89/Forecast-Energy-StockChange-Colombia)  
 **Status:** in progress  
-Credit risk modeling project on **synthetic mortgage lending data** using **LQN**, covering data generation, model training and evaluation of default risk.
+Forecasting Colombia's **hourly wholesale electricity spot price** (*precio de bolsa*) from public **SIMEM/XM** data, with a **self-updating ingestion pipeline** running on GitHub Actions.
 
 ---
 
-### 🔭 Roadmap
-
-- **GNSS forecaster** – time-series forecasting of GNSS signals (thesis project).
+### 4️⃣ Mortgage Credit Risk – LQN with Synthetic Data 🚧
+**Status:** in progress  
+Credit risk modeling project on **synthetic mortgage lending data** using **LQN**, covering data generation, model training and evaluation of default risk.
 
 ---
 
