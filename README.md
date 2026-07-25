@@ -38,8 +38,7 @@ Forecasting Colombia's **hourly wholesale electricity spot price** (*precio de b
 ---
 
 ### 4️⃣ ASRS Rotorcraft NLP – MSc Thesis 🎓
-**Repo:** [POLUX89/asrs-rotorcraft-nlp](https://github.com/POLUX89/asrs-rotorcraft-nlp)  
-**Status:** thesis in progress  
+**Status:** in progress — *repository private until defense*  
 **NLP** on **NASA ASRS** aviation safety reports: taxonomic coverage of incident narratives in **rotorcraft operations**. Combines transformer-based classification with **disaggregated evaluation** — auditing model output on the aircraft I have flown (UH-60, UH-1) using **1500+ flight hours** of domain expertise. Documented with model card, datasheet and data statement, including the self-selection bias inherent to voluntary reporting.
 
 ---
