@@ -1,4 +1,12 @@
-# Daniel Felipe Sacristán Ávila – Data Science Portfolio
+<img src="./assets/banner.svg" alt="Daniel Felipe Sacristán Ávila — Helicopter Pilot to Data Scientist · 1500+ flight hours" width="100%">
+
+<div align="center">
+
+### 🌐 [**View the live portfolio »**](https://polux89.github.io/Daniel-Sacristan-DataScience-portfolio/)
+
+</div>
+
+---
 
 This repository is the index of my data science projects, built from my experience in **military aviation operations, rehabilitation, and daily life optimization**.
 
