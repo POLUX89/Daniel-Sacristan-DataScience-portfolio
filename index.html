@@ -120,6 +120,13 @@
   .card .top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
   .card h3 { font-size: 1.05rem; }
   .card p { color: var(--muted); font-size: .93rem; flex-grow: 1; }
+  .card .finding {
+    border-left: 3px solid var(--accent);
+    padding-left: 10px;
+    font-size: .88rem;
+    color: var(--muted);
+    flex-grow: 0;
+  }
   .pill {
     font-size: .72rem; font-weight: 700; letter-spacing: .03em;
     padding: 4px 10px; border-radius: 999px; white-space: nowrap;
@@ -200,7 +207,8 @@
           <h3>🏋️ Rehab Strength Dashboard</h3>
           <span class="pill live">LIVE</span>
         </div>
-        <p>Streamlit health-analytics app tracking workouts, sleep and recovery after a stroke. Full data pipeline, statistical testing, CI and a live deployment.</p>
+        <p>Streamlit dashboard integrating three independent data sources, with regression and classification models, SHAP explanations and stationarity testing (ADF/KPSS). Ships a one-click synthetic dataset, so anyone can explore every tab with zero real health data.</p>
+        <p class="finding">Data freshness is a first-class signal — no forward-filling, no assumed "today". Delayed data is shown as delayed.</p>
         <div class="links">
           <a href="https://rehab-strength.streamlit.app" target="_blank" rel="noopener">Live app »</a>
           <a href="https://github.com/POLUX89/rehab-strength" target="_blank" rel="noopener">Repository</a>
@@ -212,7 +220,8 @@
           <h3>📰 NLP — Fake News Colombia</h3>
           <span class="pill live">LIVE</span>
         </div>
-        <p>Spanish NLP classifying news verdicts (true / false / uncertain) from Colombian fact-checks. Web-scraped dataset, BETO fine-tuning, and responsible-ML docs: model card, datasheet &amp; data statement.</p>
+        <p>BETO fine-tuned on 2,935 fact-checks harvested from ColombiaCheck's ClaimReview markup, published on the Hugging Face Hub with model card, datasheet and data statement.</p>
+        <p class="finding">macro-F1 0.405 vs 0.386 for the TF-IDF baseline — but "Verdadero" scores 0.00 with only 93 examples. It is a Falso/Cuestionable discriminator, not a truth detector, and the model card says so.</p>
         <div class="links">
           <a href="https://beto-colombiacheck.streamlit.app/" target="_blank" rel="noopener">Live demo »</a>
           <a href="https://huggingface.co/polux89/beto-colombiacheck" target="_blank" rel="noopener">🤗 Model</a>
@@ -225,7 +234,8 @@
           <h3>⚡ Energy Price Forecasting</h3>
           <span class="pill wip">IN PROGRESS</span>
         </div>
-        <p>Forecasting Colombia's hourly wholesale electricity spot price (<em>precio de bolsa</em>) from public SIMEM/XM data, with a self-updating ingestion pipeline on GitHub Actions.</p>
+        <p>Self-updating GitHub Actions pipeline that backfilled 1,107,336 raw records into 101,256 continuous hourly observations of Colombia's spot price (<em>precio de bolsa</em>) since 2015 — no gaps, no nulls — and refreshes daily with no server.</p>
+        <p class="finding">XM's settlement versions don't mature in name order: <code>TX3</code>+ adjustments are published after the <code>TXF</code> invoice, so the naive ordering left 47% of hours stale.</p>
         <div class="links">
           <a href="https://github.com/POLUX89/Forecast-Energy-StockChange-Colombia" target="_blank" rel="noopener">Repository</a>
         </div>
@@ -236,7 +246,8 @@
           <h3>🚁 ASRS Rotorcraft NLP</h3>
           <span class="pill thesis">THESIS</span>
         </div>
-        <p>MSc thesis: NLP on NASA ASRS aviation safety reports — taxonomic coverage of incident narratives in rotorcraft operations, with disaggregated evaluation audited against 1500+ flight hours of domain expertise.</p>
+        <p>MSc thesis: NLP over NASA ASRS incident narratives for taxonomic coverage of rotorcraft operations.</p>
+        <p class="finding">Evaluation is disaggregated by slice and audited against the ~250 reports covering aircraft I have flown — ASRS is voluntary and self-selected, so it cannot measure rates.</p>
         <div class="links"><span class="muted-note">Repository private until defense</span></div>
       </article>
 

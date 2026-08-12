@@ -19,7 +19,9 @@ Colombian Air Force captain (UH-60 Black Hawk copilot / UH-1 pilot) transitionin
 ### 1️⃣ Rehab Strength Dashboard (Streamlit) ✅
 **Repo:** [POLUX89/rehab-strength](https://github.com/POLUX89/rehab-strength)  
 **Live app:** [rehab-strength.streamlit.app](https://rehab-strength.streamlit.app)  
-Streamlit analytics dashboard to track **workouts, sleep and recovery** during my CVA rehabilitation. Integrates three independent data sources, estimates 1RM (Epley), compares pre vs post CVA performance, and applies statistical tests with a strong focus on **data integrity and freshness**. Includes CI, tests and a live deployment.
+Streamlit dashboard integrating **three independent data sources** (workouts, sleep, recovery), with estimated 1RM (Epley), stationarity testing (ADF/KPSS), hypothesis testing, and regression + classification models explained with **SHAP**. Ships a **one-click synthetic dataset**, so anyone can explore every tab with zero real health data. CI, tests and a live deployment.
+
+> **Finding:** data freshness is a first-class signal — no forward-filling, no assumed "today". Delayed data is shown as delayed, which in a rehabilitation context is the difference between a real trend and an artifact.
 
 ---
 
@@ -27,20 +29,26 @@ Streamlit analytics dashboard to track **workouts, sleep and recovery** during m
 **Repo:** [POLUX89/NLP-Fake-News-Colombia](https://github.com/POLUX89/NLP-Fake-News-Colombia)  
 **Live demo:** [beto-colombiacheck.streamlit.app](https://beto-colombiacheck.streamlit.app/)  
 **Model:** 🤗 [polux89/beto-colombiacheck](https://huggingface.co/polux89/beto-colombiacheck) *(published on the Hugging Face Hub)*  
-Spanish **NLP** project that classifies news verdicts (true / false / uncertain) from Colombian fact-checks (ColombiaCheck). Includes a **web-scraped dataset**, **BETO** fine-tuning, and responsible-ML documentation — **model card, datasheet and data statement**.
+**BETO** fine-tuned on **2,935 fact-checks** harvested from ColombiaCheck's **ClaimReview markup** (schema.org JSON-LD), published on the **Hugging Face Hub** with model card, datasheet and data statement. The model input is the *neutral claim* (~10 words), not the headline — the headline states the verdict and would leak the label. Split 70/15/15 frozen by seed; test evaluated once.
+
+> **Finding:** macro-F1 **0.405** vs **0.386** for the TF-IDF baseline (95% bootstrap CI 0.371–0.440) — but the `Verdadero` class scores **0.00**, with only 93 examples in the corpus. It is a `Falso`/`Cuestionable` discriminator, **not a truth detector**, and the model card says so explicitly.
 
 ---
 
 ### 3️⃣ Energy Price Forecasting – Colombia 🚧
 **Repo:** [POLUX89/Forecast-Energy-StockChange-Colombia](https://github.com/POLUX89/Forecast-Energy-StockChange-Colombia)  
 **Status:** in progress  
-Forecasting Colombia's **hourly wholesale electricity spot price** (*precio de bolsa*) from public **SIMEM/XM** data, with a **self-updating ingestion pipeline** running on GitHub Actions.
+Forecasting Colombia's **hourly wholesale electricity spot price** (*precio de bolsa*) from public **SIMEM/XM** data. A **self-updating pipeline** on GitHub Actions backfilled **1,107,336 raw records into 101,256 continuous hourly observations** since 2015 — **no gaps, no nulls** — and refreshes every morning with no server and no manual step. Ingestion is idempotent; the raw layer keeps every settlement version, accumulating a point-in-time record for honest backtesting.
+
+> **Finding:** XM's settlement versions **don't mature in name order** — the `TX3`+ adjustments are published *after* the `TXF` invoice. Using the naive ordering left **47% of hours stale**. Over 89% of hours are revised by more than 1 COP/kWh between first and definitive version.
 
 ---
 
 ### 4️⃣ ASRS Rotorcraft NLP – MSc Thesis 🎓
 **Status:** in progress — *repository private until defense*  
-**NLP** on **NASA ASRS** aviation safety reports: taxonomic coverage of incident narratives in **rotorcraft operations**. Combines transformer-based classification with **disaggregated evaluation** — auditing model output on the aircraft I have flown (UH-60, UH-1) using **1500+ flight hours** of domain expertise. Documented with model card, datasheet and data statement, including the self-selection bias inherent to voluntary reporting.
+**NLP** on **NASA ASRS** aviation safety reports: taxonomic coverage of incident narratives in **rotorcraft operations**. Combines transformer-based classification with **disaggregated evaluation**, auditing model output against the ~250 reports covering the aircraft I have flown (UH-60, UH-1) with **1500+ flight hours** of domain expertise. Documented with model card, datasheet and data statement.
+
+> **Finding (by design):** ASRS is **voluntary and self-selected**, so it cannot be used to measure incident rates or compare operators. Stating what the dataset *cannot* answer is part of the thesis, not a footnote.
 
 ---
 
