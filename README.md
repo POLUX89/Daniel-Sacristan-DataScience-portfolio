@@ -26,6 +26,7 @@ Streamlit analytics dashboard to track **workouts, sleep and recovery** during m
 ### 2️⃣ NLP – Fake News Colombia ✅
 **Repo:** [POLUX89/NLP-Fake-News-Colombia](https://github.com/POLUX89/NLP-Fake-News-Colombia)  
 **Live demo:** [beto-colombiacheck.streamlit.app](https://beto-colombiacheck.streamlit.app/)  
+**Model:** 🤗 [polux89/beto-colombiacheck](https://huggingface.co/polux89/beto-colombiacheck) *(published on the Hugging Face Hub)*  
 Spanish **NLP** project that classifies news verdicts (true / false / uncertain) from Colombian fact-checks (ColombiaCheck). Includes a **web-scraped dataset**, **BETO** fine-tuning, and responsible-ML documentation — **model card, datasheet and data statement**.
 
 ---
