@@ -21,7 +21,9 @@ Colombian Air Force captain (UH-60 Black Hawk copilot / UH-1 pilot) transitionin
 **Live app:** [rehab-strength.streamlit.app](https://rehab-strength.streamlit.app)  
 Streamlit dashboard integrating **three independent data sources** (workouts, sleep, recovery), with estimated 1RM (Epley), stationarity testing (ADF/KPSS), hypothesis testing, and regression + classification models explained with **SHAP**. Ships a **one-click synthetic dataset**, so anyone can explore every tab with zero real health data. CI, tests and a live deployment.
 
-> **Finding:** data freshness is a first-class signal — no forward-filling, no assumed "today". Delayed data is shown as delayed, which in a rehabilitation context is the difference between a real trend and an artifact.
+Sleep-quality classification under **5-fold cross-validation**: **ROC-AUC 0.77**, accuracy 0.70.
+
+> **Finding:** that AUC swings from **0.56 to 0.92 across folds** (±0.15) on a small personal sample. The spread is wide enough that the model is **directional, not diagnostic** — reporting the mean alone would overstate it. The same discipline applies to the data itself: no forward-filling, no assumed "today"; delayed data is shown as delayed, which in a rehabilitation context is the difference between a real trend and an artifact.
 
 ---
 
