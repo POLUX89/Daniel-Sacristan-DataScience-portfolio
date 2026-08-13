@@ -117,6 +117,21 @@
     transition: transform .12s ease;
   }
   .card:hover { transform: translateY(-3px); }
+  /* Preview strip. `contain` rather than `cover`: these are charts, and cropping
+     one would cut off axis labels or confusion-matrix cells. */
+  .card .preview {
+    display: block;
+    width: 100%;
+    /* height:auto is required — the width/height attributes map to CSS height,
+       which would otherwise pin the box and defeat aspect-ratio. */
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    background: #0e1117;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 4px;
+  }
   .card .top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
   .card h3 { font-size: 1.05rem; }
   .card p { color: var(--muted); font-size: .93rem; flex-grow: 1; }
@@ -207,6 +222,8 @@
           <h3>🏋️ Rehab Strength Dashboard</h3>
           <span class="pill live">LIVE</span>
         </div>
+        <img class="preview" src="./assets/previews/rehab-strength.jpg" loading="lazy" width="1200" height="607" alt="Estimated 1RM for one exercise before and after the stroke, with a 15-day moving average">
+
         <p>Streamlit dashboard integrating three independent data sources, with SHAP-explained models and stationarity testing (ADF/KPSS). Sleep-quality classifier scores <strong>ROC-AUC 0.77</strong> and 0.70 accuracy under 5-fold cross-validation. Ships a one-click synthetic dataset, so anyone can explore every tab with zero real health data.</p>
         <p class="finding">That AUC swings from 0.56 to 0.92 across folds (±0.15) on a small personal sample — the model is directional, not diagnostic. Same discipline applies to the data: no forward-filling, no assumed "today".</p>
         <div class="links">
@@ -220,6 +237,8 @@
           <h3>📰 NLP — Fake News Colombia</h3>
           <span class="pill live">LIVE</span>
         </div>
+        <img class="preview" src="./assets/previews/nlp-fake-news.jpg" loading="lazy" width="1200" height="958" alt="Test-set confusion matrix: the Verdadero row is empty, every example misclassified">
+
         <p>BETO fine-tuned on 2,935 fact-checks harvested from ColombiaCheck's ClaimReview markup, published on the Hugging Face Hub with model card, datasheet and data statement.</p>
         <p class="finding">macro-F1 0.405 vs 0.386 for the TF-IDF baseline — but "Verdadero" scores 0.00 with only 93 examples. It is a Falso/Cuestionable discriminator, not a truth detector, and the model card says so.</p>
         <div class="links">
@@ -234,6 +253,8 @@
           <h3>⚡ Energy Price Forecasting</h3>
           <span class="pill wip">IN PROGRESS</span>
         </div>
+        <img class="preview" src="./assets/previews/energy-forecast.svg" loading="lazy" width="800" height="450" alt="Stylised hourly spot price series with a scarcity peak">
+
         <p>Self-updating GitHub Actions pipeline that backfilled 1,107,336 raw records into 101,256 continuous hourly observations of Colombia's spot price (<em>precio de bolsa</em>) since 2015 — no gaps, no nulls — and refreshes daily with no server.</p>
         <p class="finding">XM's settlement versions don't mature in name order: <code>TX3</code>+ adjustments are published after the <code>TXF</code> invoice, so the naive ordering left 47% of hours stale.</p>
         <div class="links">
@@ -246,6 +267,8 @@
           <h3>🚁 ASRS Rotorcraft NLP</h3>
           <span class="pill thesis">THESIS</span>
         </div>
+        <img class="preview" src="./assets/previews/asrs-rotorcraft.svg" loading="lazy" width="800" height="450" alt="Rotorcraft silhouette whose rotor dissolves into narratives feeding a classifier">
+
         <p>MSc thesis: NLP over NASA ASRS incident narratives for taxonomic coverage of rotorcraft operations.</p>
         <p class="finding">Evaluation is disaggregated by slice and audited against the ~250 reports covering aircraft I have flown — ASRS is voluntary and self-selected, so it cannot measure rates.</p>
         <div class="links"><span class="muted-note">Repository private until defense</span></div>

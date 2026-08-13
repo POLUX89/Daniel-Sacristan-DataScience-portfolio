@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="Stylised hourly electricity spot price series">
+  <defs>
+    <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3ddc84" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#3ddc84" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4dabff"/>
+      <stop offset="100%" stop-color="#3ddc84"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="#0e1117"/>
+
+  <!-- plot grid -->
+  <g stroke="#8fb6dd" stroke-opacity="0.10" stroke-width="1">
+    <path d="M70 90h680M70 170h680M70 250h680M70 330h680"/>
+    <path d="M70 60v350"/>
+    <path d="M70 410h680"/>
+  </g>
+
+  <!-- price series: spiky hourly shape with a scarcity peak -->
+  <path d="M70 330 L104 318 L138 336 L172 300 L206 322 L240 288 L274 306 L308 262
+           L342 292 L376 250 L410 274 L444 150 L478 236 L512 258 L546 214 L580 244
+           L614 196 L648 226 L682 178 L716 208 L750 168 L750 410 L70 410 Z"
+        fill="url(#fill)"/>
+  <path d="M70 330 L104 318 L138 336 L172 300 L206 322 L240 288 L274 306 L308 262
+           L342 292 L376 250 L410 274 L444 150 L478 236 L512 258 L546 214 L580 244
+           L614 196 L648 226 L682 178 L716 208 L750 168"
+        fill="none" stroke="url(#line)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- scarcity hour called out -->
+  <circle cx="444" cy="150" r="6" fill="#3ddc84"/>
+  <circle cx="444" cy="150" r="13" fill="none" stroke="#3ddc84" stroke-opacity="0.4" stroke-width="2"/>
+
+  <text x="70" y="46" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19" font-weight="600" fill="#e8eef4">Precio de bolsa · COP/kWh</text>
+  <text x="70" y="438" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#8fa6bb">101,256 continuous hourly observations since 2015</text>
+</svg>
