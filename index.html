@@ -142,6 +142,16 @@
     color: var(--muted);
     flex-grow: 0;
   }
+  /* "You can try this right now" — a filled block rather than the finding's
+     rule, so it reads as an invitation and not as more commentary. */
+  .card .try {
+    background: var(--accent-soft);
+    border-radius: 9px;
+    padding: 9px 12px;
+    font-size: .86rem;
+    color: var(--text);
+    flex-grow: 0;
+  }
   .pill {
     font-size: .72rem; font-weight: 700; letter-spacing: .03em;
     padding: 4px 10px; border-radius: 999px; white-space: nowrap;
@@ -224,8 +234,9 @@
         </div>
         <img class="preview" src="./assets/previews/rehab-strength.jpg" loading="lazy" width="1200" height="607" alt="Estimated 1RM for one exercise before and after the stroke, with a 15-day moving average">
 
-        <p>Streamlit dashboard integrating three independent data sources, with SHAP-explained models and stationarity testing (ADF/KPSS). Sleep-quality classifier scores <strong>ROC-AUC 0.77</strong> and 0.70 accuracy under 5-fold cross-validation. Ships a one-click synthetic dataset, so anyone can explore every tab with zero real health data.</p>
+        <p>Streamlit dashboard integrating three independent data sources, with SHAP-explained models and stationarity testing (ADF/KPSS). Sleep-quality classifier scores <strong>ROC-AUC 0.77</strong> and 0.70 accuracy under 5-fold cross-validation.</p>
         <p class="finding">That AUC swings from 0.56 to 0.92 across folds (±0.15) on a small personal sample — the model is directional, not diagnostic. Same discipline applies to the data: no forward-filling, no assumed "today".</p>
+        <p class="try">🧪 <strong>Nothing to upload.</strong> One click loads a fully synthetic dataset — every tab, model and SHAP plot is explorable with zero real health data.</p>
         <div class="links">
           <a href="https://rehab-strength.streamlit.app" target="_blank" rel="noopener">Live app »</a>
           <a href="https://github.com/POLUX89/rehab-strength" target="_blank" rel="noopener">Repository</a>

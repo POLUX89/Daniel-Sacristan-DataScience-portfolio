@@ -19,7 +19,10 @@ Colombian Air Force captain (UH-60 Black Hawk copilot / UH-1 pilot) transitionin
 ### 1️⃣ Rehab Strength Dashboard (Streamlit) ✅
 **Repo:** [POLUX89/rehab-strength](https://github.com/POLUX89/rehab-strength)  
 **Live app:** [rehab-strength.streamlit.app](https://rehab-strength.streamlit.app)  
-Streamlit dashboard integrating **three independent data sources** (workouts, sleep, recovery), with estimated 1RM (Epley), stationarity testing (ADF/KPSS), hypothesis testing, and regression + classification models explained with **SHAP**. Ships a **one-click synthetic dataset**, so anyone can explore every tab with zero real health data. CI, tests and a live deployment.
+
+> 🧪 **Nothing to upload.** The app ships a fully synthetic dataset: one click loads every tab, model and SHAP plot with **zero real health data**. A personal-data dashboard that a stranger can still explore end to end.
+
+Streamlit dashboard integrating **three independent data sources** (workouts, sleep, recovery), with estimated 1RM (Epley), stationarity testing (ADF/KPSS), hypothesis testing, and regression + classification models explained with **SHAP**. CI, tests and a live deployment.
 
 Sleep-quality classification under **5-fold cross-validation**: **ROC-AUC 0.77**, accuracy 0.70.
 
